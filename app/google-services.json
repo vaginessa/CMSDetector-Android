@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "764263735372",
+    "firebase_url": "https://info-gempa-bumi-bmkg.firebaseio.com",
+    "project_id": "info-gempa-bumi-bmkg",
+    "storage_bucket": "info-gempa-bumi-bmkg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764263735372:android:de78c8cca241b5f7",
+        "android_client_info": {
+          "package_name": "felixgiov.gempabumidanprakiraancuacabmkg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764263735372-8cqaq8n1ffeev4jdee4eqcjmb9g5su76.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "felixgiov.gempabumidanprakiraancuacabmkg",
+            "certificate_hash": "E044CC2BEA1721A6E595D5A93CA86A9A84BB6056"
+          }
+        },
+        {
+          "client_id": "764263735372-6os61bmqsmlb4q1ebbvv6n484egeensr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5V-ktHd44Ww7oDbPLRsAC16uEYwH8RLI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764263735372:android:5ca417bdc44e94ac",
+        "android_client_info": {
+          "package_name": "felixgiov.cmsdetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764263735372-9i0n681fkc5uiar9dj4mvmi713e8p46c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "felixgiov.cmsdetector",
+            "certificate_hash": "E044CC2BEA1721A6E595D5A93CA86A9A84BB6056"
+          }
+        },
+        {
+          "client_id": "764263735372-6os61bmqsmlb4q1ebbvv6n484egeensr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5V-ktHd44Ww7oDbPLRsAC16uEYwH8RLI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764263735372-6os61bmqsmlb4q1ebbvv6n484egeensr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
