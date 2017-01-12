@@ -18,6 +18,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.Arrays;
 import java.util.List;
 
 import felixgiov.cmsdetector.R;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setElevation(0);
 
         mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
         klik = (ImageButton) findViewById(R.id.klik_button);
@@ -97,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<String>> call, Response<List<String>> response) {
                 if (response.isSuccessful()) {
                     List<String> cms = response.body();
+                    cms.removeAll(Arrays.asList("", null));
                     recyclerView.setAdapter(new CmsAdapter(cms, R.layout.list_tab, getApplicationContext()));
                     mProgressBar.setVisibility(View.GONE);
                     Log.d("list", cms.toString());
