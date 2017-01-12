@@ -6,10 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -33,14 +35,18 @@ public class MainActivity extends AppCompatActivity {
     private AdView mAdView;
     ImageButton klik;
     EditText url;
+    ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
         klik = (ImageButton) findViewById(R.id.klik_button);
         url = (EditText) findViewById(R.id.url_et);
+
+        mProgressBar.setVisibility(View.GONE);
 
         if (API_KEY.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please obtain your API KEY first!", Toast.LENGTH_LONG).show();
@@ -51,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rest(url.getText().toString());
+                mProgressBar.setVisibility(View.VISIBLE);
+                try {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
             }
         });
 
@@ -85,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<String> cms = response.body();
                     recyclerView.setAdapter(new CmsAdapter(cms, R.layout.list_tab, getApplicationContext()));
+                    mProgressBar.setVisibility(View.GONE);
                     Log.d("list", cms.toString());
 
                 } else {

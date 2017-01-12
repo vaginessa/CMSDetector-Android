@@ -13,17 +13,18 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:paddingLeft="12dp"
-        android:layout_height="48dp"
-        android:id="@+id/url_et"
-        android:hint="http://"
-        android:maxLines="1"
-        android:autoLink="web"
-        android:layout_toLeftOf="@+id/klik_button"
-        android:layout_toStartOf="@+id/klik_button"
-        android:textColor="#FFFFFF"/>
+        <EditText
+            android:layout_width="fill_parent"
+            android:paddingLeft="12dp"
+            android:layout_height="48dp"
+            android:id="@+id/url_et"
+            android:hint="http://"
+            android:maxLines="1"
+            android:autoLink="web"
+            android:inputType="text"
+            android:layout_toLeftOf="@+id/klik_button"
+            android:layout_toStartOf="@+id/klik_button"
+            android:textColor="#FFFFFF"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -38,36 +39,44 @@
 
     </RelativeLayout>
 
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/app_desc"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
+
+    </android.support.v7.widget.CardView>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         app:adSize="BANNER"
-        app:adUnitId="@string/banner_ad_unit_id"
-        android:layout_marginTop="12dp"/>
+        app:adUnitId="@string/banner_ad_unit_id"/>
 
-    <TextView
-        android:text="@string/app_desc"
-        android:padding="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
-    <android.support.v7.widget.CardView
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="18dp">
+        android:layout_marginTop="12dp"
+        android:id="@+id/recview">
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:id="@+id/recview">
+    </android.support.v7.widget.RecyclerView>
 
-        </android.support.v7.widget.RecyclerView>
-
-    </android.support.v7.widget.CardView>
 
 </LinearLayout>
