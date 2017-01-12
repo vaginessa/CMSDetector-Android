@@ -21,7 +21,8 @@
             android:hint="http://"
             android:maxLines="1"
             android:autoLink="web"
-            android:inputType="text"
+            android:inputType="textNoSuggestions"
+            android:background="@android:color/transparent"
             android:layout_toLeftOf="@+id/klik_button"
             android:layout_toStartOf="@+id/klik_button"
             android:textColor="#FFFFFF"/>

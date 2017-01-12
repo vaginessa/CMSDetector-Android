@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">CMS Detector</string>
     <string name="banner_ad_unit_id">ca-app-pub-2029021861713537/7143027207</string>
-    <string name="app_desc">Type an URL and click the button to show list of technologies that website uses.</string>
+    <string name="app_desc">Type an URL and click the button to analyze website and detect the plaform, language, framework and other technologies used.</string>
 </resources>
